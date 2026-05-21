@@ -55,6 +55,7 @@ function Home() {
   const fetchStudies = async () => {
     try {
       const response = await getStudy();
+      console.log(response);
       setsubjectAdd(response.studies);
     }
     catch (error) {
