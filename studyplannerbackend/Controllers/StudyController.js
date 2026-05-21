@@ -36,13 +36,15 @@ const createdStudy = async (req,res) => {
         });
 
         return res.status(201).json({
-            message: "User created Successfully",
+            message: "Study created Successfully",
             study: newStudy
         });
     }catch(error){
+        console.log(error);
         return res.status(500).json({
-            message:"Internal Server Error"
-        })
+            message:error.message,
+            error
+        });
     }
 }
 
@@ -71,15 +73,17 @@ const updateStudy = async (req,res) => {
         },{new:true});
 
         return res.status(200).json({
-            message:"User updated successfully",
-            updateStudy
+            message:"Study updated successfully",
+            updatedStudy
         });
     }catch(error){
+        console.log(error);
         return res.status(500).json({
-            message:"Internal Server Error"
-        })
+            message:error.message,
+            error
+        });
+        }
     }
-};
 
 
 const deletedStudy = async (req, res) => {
@@ -106,9 +110,9 @@ const deletedStudy = async (req, res) => {
   }
 
   catch (error) {
-
+    console.log(error);
     return res.status(500).json({
-      message: "Server Error"
+      message: error.message
     });
 
   }
