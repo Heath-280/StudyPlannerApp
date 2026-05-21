@@ -24,7 +24,7 @@ export const createStudy = async (studyData) => {
 
 // GET STUDIES
 export const getStudy = async () => {
-  const response =  await API.get( "/study",
+  const response =  await API.get( "/",
       {
         headers: {
           Authorization:

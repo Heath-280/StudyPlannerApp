@@ -79,6 +79,11 @@ function Home() {
     if (subject.trim() === "") return;
     if (duration.trim() === "") return;
 
+    if(!dueDate){
+      toast.error("Please select a due date");
+      return;
+    }
+
     try {
 
       setLoading(true);
@@ -86,7 +91,7 @@ function Home() {
       await createStudy({
         title: subject,
         description: "Study Task",
-        duration,
+        duration: Number(duration),
         dueDate,
         priority
       });

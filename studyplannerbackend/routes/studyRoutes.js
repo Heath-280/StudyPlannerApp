@@ -3,7 +3,7 @@ import { getStudy,createdStudy,deletedStudy,updateStudy } from "../Controllers/S
 import authMiddleware from "../middleware/authMiddleware.js";
 const Router = express.Router();
 
-Router.get("/study",authMiddleware,getStudy);
+Router.get("/",authMiddleware,getStudy);
 Router.post("/new/study",authMiddleware,createdStudy);
 Router.put("/:id/update",authMiddleware,updateStudy);
 Router.delete("/:id/delete",authMiddleware,deletedStudy);
