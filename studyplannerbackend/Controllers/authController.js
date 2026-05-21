@@ -50,8 +50,9 @@ const  Register = async (req,res) => {
             message: "Register created successfully"
         })
     }catch(error){
+        console.log(error);
         return res.status(500).json({
-            message:"Mongoose error"
+            message: error.message
         })
     };
 }
@@ -110,8 +111,9 @@ const Login = async (req,res) => {
             }
         });
     }catch (error){
+        console.log(error);
         return res.status(500).json({
-            message: "Server Error"
+            message: error.message
         });
     }
 }
