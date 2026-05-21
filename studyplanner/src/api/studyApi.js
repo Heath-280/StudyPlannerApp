@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/study"
+  baseURL: "https://studyplannerapp-vmp4.onrender.com/api/study"
 });
 
 // GET TOKEN
