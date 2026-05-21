@@ -42,7 +42,7 @@ function Home() {
 
   const [dueDate, setDueDate] = useState("");
 
-  const [priority, setPriority] = useState("medium");
+  const [priority, setPriority] = useState("Medium");
 
   const navigate = useNavigate();
 
@@ -96,7 +96,7 @@ function Home() {
       setSubject("");
       setDuration("");
       setDueDate("");
-      setPriority("medium");
+      setPriority("Medium");
 
       fetchStudies();
 
